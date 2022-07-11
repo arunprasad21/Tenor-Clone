@@ -19,7 +19,8 @@ function Searchpage(props) {
   async function fetchdata() {
     setIsError(false);
     try {
-      const searchResults = await axios.get(
+        setData([]);
+        const searchResults = await axios.get(
         `https://g.tenor.com/v2/search?q=${search}&key=${APIKey}&limit=30&media_filter=tinygif&pos=${pos}`
       );
       var fetchResult = searchResults.data.results;
@@ -32,6 +33,7 @@ function Searchpage(props) {
   async function getinfinitedata() {
     setIsError(false);
     try {
+       
       const searchResults = await axios.get(
         `https://g.tenor.com/v2/search?q=${search}&key=${APIKey}&limit=30&media_filter=tinygif&pos=${pos}`
       );
