@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Homepage />} />
+        <Route exact path={process.env.PUBLIC_URL + '/'} element={<Homepage />} />
         <Route exact path="/searchpage" element={<Searchpage />} />
       </Routes>
     </div>
