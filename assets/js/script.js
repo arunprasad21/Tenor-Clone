@@ -20,6 +20,8 @@ window.onscroll = function () {
       searchwidth[0].style.width = 85 + "%";
     } else if (width >= 425) {
       searchwidth[0].style.width = 80 + "%";
+    }else if(width >= 375){
+        searchwidth[0].style.width = 78 + "%";
     }
   } else {
     bar.style.position = "relative";
