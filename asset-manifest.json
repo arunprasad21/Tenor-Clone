@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tenor-Clone/static/css/main.d6f9594c.css",
+    "main.js": "/Tenor-Clone/static/js/main.fc891b98.js",
+    "index.html": "/Tenor-Clone/index.html",
+    "main.d6f9594c.css.map": "/Tenor-Clone/static/css/main.d6f9594c.css.map",
+    "main.fc891b98.js.map": "/Tenor-Clone/static/js/main.fc891b98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6f9594c.css",
+    "static/js/main.fc891b98.js"
+  ]
+}
