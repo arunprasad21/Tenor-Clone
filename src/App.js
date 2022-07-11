@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <HashRouter>
+      <HashRouter basename="/">
         <Route exact path="/" element={<Homepage />} />
         <Route exact path="/searchpage" element={<Searchpage />} />
       </HashRouter>
