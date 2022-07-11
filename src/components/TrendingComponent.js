@@ -78,8 +78,8 @@ function TrendingComponent(props) {
     <OwlCarousel className="owl-theme" items={5} {...options}>
       {trending.map((el, index) => {
         return (
-          <div className="item">
-            <p onClick={() => setQueryHandler(el)}>{el}</p>
+          <div className="item" onClick={() => setQueryHandler(el)}>
+            <p>{el}</p>
           </div>
         );
       })}

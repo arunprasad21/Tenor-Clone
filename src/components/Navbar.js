@@ -1,10 +1,23 @@
 import React from "react";
-import '../app.css';
+import "../app.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 
 function Navbar() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+
+  const homepageHandler = (event) => {
+    event.preventDefault();
+    navigate("/");
+    dispatch({ type: "searchQuery", updatedQuery: "" });
+
+  };
   return (
     <nav className="navbar navbar-expand- navbar-light container">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" onClick={homepageHandler}>
         tenor
       </a>
       <div className="navbar-right">

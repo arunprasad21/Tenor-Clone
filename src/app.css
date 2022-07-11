@@ -15,6 +15,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -117,6 +118,7 @@ img {
   font-family: var(--font-sans);
   font-weight: 500;
   color: var(--light-blue) !important;
+  margin: 1rem;
 }
 .topbar {
   display: block;
@@ -142,6 +144,7 @@ img {
   width: 100%;
   left: 0;
   right: 0;
+  transition: var(--transition);
 }
 .searchbar {
   /* display: flex;
@@ -151,7 +154,7 @@ img {
   position: relative;
   transition: var(--transition);
 }
-.searchbar p {
+.searchbar a {
   font-size: 3rem;
   color: #fff;
   margin: 1rem;
@@ -253,6 +256,7 @@ a:link {
   padding: 10px;
   font-weight: 700;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .item img {

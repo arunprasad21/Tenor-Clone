@@ -32,6 +32,8 @@ function Homepage() {
     fetchFeatured();
   }, []);
 
+
+
   return (
     <div>
       {isError ? (

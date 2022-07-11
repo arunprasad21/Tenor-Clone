@@ -12,6 +12,13 @@ function Searchbar(props) {
 
   const currentQuery = useSelector((state) => state.query);
 
+  const homepageHandler = (event) => {
+    event.preventDefault();
+    navigate("/");
+    dispatch({ type: "searchQuery", updatedQuery: "" });
+    window.scrollTo({ top: 0 });
+  };
+
   const searchHandler = (e) => {
     setSearch(e.target.value);
   };
@@ -19,35 +26,42 @@ function Searchbar(props) {
   const setQueryHandler = () => {
     dispatch({ type: "searchQuery", updatedQuery: search });
   };
-  
+
   useEffect(() => {
     setSearch(currentQuery);
-  }, [currentQuery])
-  
+  }, [currentQuery]);
 
   const enterKeyHandler = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      if(search===""){
-          alert("please enter search query");
-      }else{
-      setQueryHandler();
-      navigate("/searchpage");
+      if (search === "") {
+        alert("Please enter to search");
+      } else {
+        setQueryHandler();
+        navigate("/searchpage");
+        window.scrollTo({ top: 0 });
+      }
     }
-}
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setQueryHandler();
-    navigate("/searchpage");
+    if (search === "") {
+      alert("Please enter to search");
+    } else {
+      setQueryHandler();
+      navigate("/searchpage");
+      window.scrollTo({ top: 0 });
+    }
   };
 
   return (
     <div className="searchbar-nav" id="sticky-search">
       <div className="container searchbar ">
         <div>
-          <p className="textBrand">tenor</p>
+          <a className="textBrand" onClick={homepageHandler}>
+            tenor
+          </a>
         </div>
         <div className="d-flex justify-content-end">
           <div className="search">
@@ -56,7 +70,7 @@ function Searchbar(props) {
               className="search-input"
               placeholder="Search for GIFs and Stickers"
               name="search"
-               value={search}
+              value={search}
               onChange={searchHandler}
               onKeyPress={enterKeyHandler}
             />

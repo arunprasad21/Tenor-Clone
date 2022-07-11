@@ -15,7 +15,6 @@ function Searchpage(props) {
   const [isError, setIsError] = useState(false);
 
   let search = useSelector((state) => state.query);
-  console.log(search);
 
   async function fetchdata() {
     setIsError(false);
