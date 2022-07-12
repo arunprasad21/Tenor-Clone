@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Tenor-Clone/static/css/main.7cc169c3.css",
-    "main.js": "/Tenor-Clone/static/js/main.3b48d5a0.js",
+    "main.css": "/Tenor-Clone/static/css/main.8ca1ffc1.css",
+    "main.js": "/Tenor-Clone/static/js/main.0786d9b6.js",
     "index.html": "/Tenor-Clone/index.html",
-    "main.7cc169c3.css.map": "/Tenor-Clone/static/css/main.7cc169c3.css.map",
-    "main.3b48d5a0.js.map": "/Tenor-Clone/static/js/main.3b48d5a0.js.map"
+    "main.8ca1ffc1.css.map": "/Tenor-Clone/static/css/main.8ca1ffc1.css.map",
+    "main.0786d9b6.js.map": "/Tenor-Clone/static/js/main.0786d9b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cc169c3.css",
-    "static/js/main.3b48d5a0.js"
+    "static/css/main.8ca1ffc1.css",
+    "static/js/main.0786d9b6.js"
   ]
 }
