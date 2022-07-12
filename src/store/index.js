@@ -1,6 +1,8 @@
 import {createStore} from 'redux';
 
-const queryReducer = (state = {query: ""},action) => {
+
+const localStorageQuery = localStorage.getItem("query");
+const queryReducer = (state = {query:localStorageQuery},action) => {
     if(action.type === "searchQuery"){
         return{
             query : action.updatedQuery

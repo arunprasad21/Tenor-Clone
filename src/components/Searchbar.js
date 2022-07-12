@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../app.css";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -25,43 +25,42 @@ function Searchbar(props) {
 
   const setQueryHandler = () => {
     dispatch({ type: "searchQuery", updatedQuery: search });
+    localStorage.setItem("query" , search);
   };
 
   useEffect(() => {
     setSearch(currentQuery);
   }, [currentQuery]);
 
+  const searchFunc = () => {
+    if (search === "") {
+      alert("Please enter to search");
+    } else {
+      setQueryHandler();
+      navigate("/searchpage/" + search);
+      window.scrollTo({ top: 0 });
+    }
+  };
+
   const enterKeyHandler = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      if (search === "") {
-        alert("Please enter to search");
-      } else {
-        setQueryHandler();
-        navigate("/searchpage");
-        window.scrollTo({ top: 0 });
-      }
+      searchFunc();
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (search === "") {
-      alert("Please enter to search");
-    } else {
-      setQueryHandler();
-      navigate("/searchpage");
-      window.scrollTo({ top: 0 });
-    }
+    searchFunc();
   };
 
   return (
     <div className="searchbar-nav" id="sticky-search">
       <div className="container searchbar ">
         <div>
-          <a className="textBrand" onClick={homepageHandler}>
+          <Link to="/" className="textBrand" onClick={homepageHandler}>
             tenor
-          </a>
+          </Link>
         </div>
         <div className="d-flex justify-content-end">
           <div className="search">

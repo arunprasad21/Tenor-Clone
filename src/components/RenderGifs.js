@@ -28,7 +28,7 @@ function RenderGifs(props) {
           >
             {props.images.map((gifs) => {
               return (
-                <div className="mItem">
+                <div className="mItem" key={gifs.id}>
                   <img src={gifs.media_formats.tinygif.url} alt={gifs.id} />
                 </div>
               );

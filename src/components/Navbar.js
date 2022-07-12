@@ -1,6 +1,6 @@
 import React from "react";
 import "../app.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 
@@ -17,9 +17,9 @@ function Navbar() {
   };
   return (
     <nav className="navbar navbar-expand- navbar-light container">
-      <a className="navbar-brand" onClick={homepageHandler}>
+      <Link to="/" className="navbar-brand" onClick={homepageHandler}>
         tenor
-      </a>
+      </Link>
       <div className="navbar-right">
         <button type="button" className="btn btn-primary btn-lg mr-4">
           CREATE

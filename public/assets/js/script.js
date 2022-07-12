@@ -4,7 +4,6 @@ window.onscroll = function () {
   var bar = document.getElementById("sticky-search");
   var searchwidth = document.getElementsByClassName("search");
   var textBrand = document.getElementsByClassName("textBrand");
-  var asdf = document.getElementById("scrollTop");
   let width = window.innerWidth;
 
   if (startProductBarPos < 0) startProductBarPos = findPosY(bar);

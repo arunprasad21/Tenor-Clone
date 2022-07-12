@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/searchpage" element={<Searchpage />} />
+        <Route exact path="/searchpage/:name/*" element={<Searchpage />} />
       </Routes>
     </div>
   );

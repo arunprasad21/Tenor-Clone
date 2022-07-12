@@ -217,6 +217,7 @@ img {
   bottom: 40px;
   position: relative;
   border-radius: 5px;
+  border: none;
   margin-right: 1rem;
 }
 

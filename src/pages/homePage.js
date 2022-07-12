@@ -44,9 +44,8 @@ function Homepage() {
             pageStart={0}
             loadMore={fetchFeatured}
             hasMore={true || false}
-            loader={
-              <Loader/>
-            }>
+            loader={<Loader/>}
+            >
             <Searchbar />
             <TrendingComponent />
             <RenderGifs images={data} />

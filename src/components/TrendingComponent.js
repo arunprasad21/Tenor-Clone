@@ -69,16 +69,17 @@ function TrendingComponent(props) {
     fetchFeatured();
   }, []);
 
-  const setQueryHandler = (data) => {
-    navigate("/searchpage");
-    dispatch({ type: "searchQuery", updatedQuery: data });
+  const setQueryHandler = (search) => {
+    navigate("/searchpage/"+search);
+    dispatch({ type: "searchQuery", updatedQuery: search });
+    localStorage.setItem("query" , search);
   };
 
   let carousel = (
     <OwlCarousel className="owl-theme" items={5} {...options}>
       {trending.map((el, index) => {
         return (
-          <div className="item" onClick={() => setQueryHandler(el)}>
+          <div className="item" key={el} onClick={() => setQueryHandler(el)}>
             <p>{el}</p>
           </div>
         );
