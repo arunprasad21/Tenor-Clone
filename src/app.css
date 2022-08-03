@@ -242,18 +242,20 @@ a:link {
   position: relative;
 }
 
-.owl-carousel .item {
+.owl-carousel .item p{
   position: relative;
   z-index: 100;
   -webkit-backface-visibility: hidden;
-  background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  background: linear-gradient(80deg, #71C5EE 0%, #2b83cc 100%);
+  color: #fff;
   height: 100px;
   text-align: center;
   justify-content: center;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-family: var(--font-sans);
   padding: 10px;
   font-weight: 700;
   text-transform: capitalize;

@@ -32,20 +32,18 @@ function Homepage() {
     fetchFeatured();
   }, []);
 
-
-
   return (
     <div>
       {isError ? (
-        <RenderError isError={isError}/>
+        <RenderError isError={isError} />
       ) : (
         <div>
           <InfiniteScroll
             pageStart={0}
             loadMore={fetchFeatured}
             hasMore={true || false}
-            loader={<Loader/>}
-            >
+            loader={<Loader />}
+          >
             <Searchbar />
             <TrendingComponent />
             <RenderGifs images={data} />

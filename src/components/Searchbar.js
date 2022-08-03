@@ -29,7 +29,7 @@ function Searchbar(props) {
   };
 
   useEffect(() => {
-    setSearch(currentQuery);
+    setSearch(currentQuery);    
   }, [currentQuery]);
 
   const searchFunc = () => {
